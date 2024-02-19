@@ -1,0 +1,103 @@
+body {
+    background-color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.main-box {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    max-width: 500px;
+    background-color: bisque;
+    border-radius: 7px;
+    margin: 0 auto;
+    padding-top: 10px;
+    overflow: hidden;
+}
+h1 {
+    text-align: center;
+}
+.position {
+    display: flex;
+    flex-direction: column;
+}
+.input-output {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.value-input {
+    max-width: 100px;
+    height: 30px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 0;
+}
+input::placeholder {
+        font-weight: 00;
+        color: black;
+        position: absolute;
+        left: 10px;
+}
+.result {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.currency {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.from {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.to {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.select {
+    max-width: fit-content;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 0;
+    font-weight: 500;
+}
+.button-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px;
+}
+.button {
+    background-color: rgba(13, 125, 163, 0.422);
+    color:rgba(255, 255, 255, 0.78);
+    height: 40px;
+    border: 0;
+    border-radius: 4px;
+    overflow: hidden;
+    flex-grow: 0.2; 
+    font-weight: 600;
+    transition: 0.5s ease-in;
+    filter:grayscale(100%);
+}
+.button:hover {
+    filter:grayscale(0%);
+}
