@@ -38,7 +38,7 @@ const showAlertNaN = () => {
 
 function convertCurrency(evt) {
     evt.preventDefault();
-    if (userInputCurrencyValue === undefined){
+    if (!userInputCurrencyValue){
         showAlertWithSound();
         return;
     }
