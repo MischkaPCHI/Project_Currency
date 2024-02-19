@@ -20,12 +20,13 @@ const inputFieldCurrencyValue = (evt) => {
     }
 }
 
-const inputFieldConvertFrom = (evt) => {
-    userInputConvertFrom = evt.target.value;
-}
-
-const inputFieldConvertTo = (evt) => {
-    userInputConvertTo = evt.target.value;
+const inputFieldConvertFromAndTo = (evt) => {
+    if(evt.target.id === 'cur1'){
+        userInputConvertFrom = evt.target.value;
+    }
+    if(evt.target.id === 'cur2'){
+        userInputConvertTo = evt.target.value;
+    }
 }
 
 const showAlertNaN = () => {
@@ -78,8 +79,8 @@ const showAlertWithSound = () => {
 
 
 currencyValue.addEventListener('input', inputFieldCurrencyValue);
-convertFrom.addEventListener('input', inputFieldConvertFrom);
-convertTo.addEventListener('input', inputFieldConvertTo);
+convertFrom.addEventListener('input', inputFieldConvertFromAndTo);
+convertTo.addEventListener('input', inputFieldConvertFromAndTo);
 
 createButtonElement.addEventListener('click', convertCurrency);
 resetButtonElement.addEventListener('click', resetButtonHandler);
