@@ -42,9 +42,9 @@ function convertCurrency(evt) {
         return;
     }
     switch(userInputConvertFrom){
-        case 'GBP': firstRate = 0.93;
+        case 'GBP': firstRate = 0.85;
         break;
-        case 'USD': firstRate = 1.17;
+        case 'USD': firstRate = 1.08;
         break;
         default:
             firstRate = 1;
