@@ -41,42 +41,25 @@ function convertCurrency(evt) {
         showAlertWithSound();
         return;
     }
-    if(userInputConvertFrom === undefined) {
-        userInputConvertFrom = 'EUR';
-        switch(userInputConvertFrom){
-        case 'EUR':
-            switch(userInputConvertTo) {
-                case 'USD': rate = 1.12; break;
-                case 'GBP': rate = 0.85; break;
-            }
-            break;
-        }
-    } else{
-
-        switch(userInputConvertFrom) {
-
-            case 'EUR':
-            switch(userInputConvertTo) {
-                case 'USD': rate = 1.12; break;
-                case 'GBP': rate = 0.85; break;
-            }
-            break;
-
-            case 'USD':
-                switch(userInputConvertTo) {
-                    case 'EUR': rate = 0.89; break;
-                    case 'GBP': rate = 0.76; break;
-                }
-                break;
-            case 'GBP':
-                switch(userInputConvertTo) {
-                    case 'EUR': rate = 1.17; break;
-                    case 'USD': rate = 1.31; break;
-                }
-                break;
-        }
+    switch(userInputConvertFrom){
+        case 'GBP': firstRate = 0.93;
+        break;
+        case 'USD': firstRate = 1.17;
+        break;
+        default:
+            firstRate = 1;
     }
-    result.textContent = userInputCurrencyValue * rate;
+
+    switch(userInputConvertTo){
+        case 'GBP': secondRate = 0.85;
+        break;
+        case 'USD': secondRate = 1.08;
+        break;
+        default:
+            secondRate = 1;
+    }
+
+    result.textContent = userInputCurrencyValue / firstRate * secondRate;
 }
 
 const resetButtonHandler = () => {
